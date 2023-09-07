@@ -1,0 +1,392 @@
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.nav, .menu, .menu-x {
+    display: none;
+}
+.home-background {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    object-fit: cover;
+}
+.blur-overlay {
+    right: 0;
+    top: 40px;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 770px;
+    height: 75px;    
+    backdrop-filter: blur(95px); /* Apply a blur to the overlay */
+}
+.main-menu {
+    font-family: Roboto;
+    font-size: 13px;
+    color: white;
+}
+.numbers {
+    font-family: Roboto;
+    font-size: 13px;
+    color: white;
+    font-weight: 900;
+}
+.href {
+    text-decoration: none;
+    color: white;
+}
+.home, .destination, .crew, .technology {
+    margin-left: 10px;
+    margin-right: 55px;
+    cursor: pointer;
+    padding: 30px 0px 28px 0px;
+    border: 2px solid transparent;
+    transition: 0.8s;
+}
+.home {
+    border-bottom: 2px solid white;
+}
+.home:hover, .destination:hover, .crew:hover, .technology:hover {
+    opacity: 0.5;
+}
+.left-top-side {
+    top: 50px;
+    position: fixed;
+    z-index: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logo {    
+    margin-left: 55px;
+}
+.straight-line {
+    width: 455px;
+    height: 0.5px;
+    background-color: rgb(110, 109, 109);
+    margin-left: 60px;
+}
+.bottom-part {
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+    width: 47%;
+    height: 130%;
+    color: white;
+}
+.first-sentence, .second-sentence, .third-sentence {
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+.first-sentence {
+    font-family: Roboto Condensed;
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 1.5;    
+}
+.second-sentence {
+    font-family: Quattrocento;
+    font-weight: 100;
+    font-size: 120px;
+    letter-spacing: 3px;  
+}
+.third-sentence {
+    font-family: Roboto Condensed;
+    font-size: 16.6px;
+    font-weight: 100;
+    width: 370px;
+    line-height: 1.5;  
+}
+.explore {
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    width: 80%;
+    height: 80%;  
+}
+.explore-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    background-color: white;
+    border-radius: 150px;
+    font-size: 22px;
+}
+.main-destination {
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.moon-image {
+    width: 300px;
+}
+
+@media (max-width: 1338px) {
+    .straight-line {
+        width: 0px;
+    }
+}
+@media (min-width: 650px) and (max-width: 1024px) {
+    .nav, .menu, .menu-x {
+        display: none;
+    }
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 1100px;
+        overflow: hidden;
+    }
+    .home-background {
+        content: url('home/background-home-tablet.jpg');
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .blur-overlay {
+        right: 0;
+        top: 0;
+        position: absolute;
+        z-index: 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        width: 550px;
+        height: 100px;        
+        backdrop-filter: blur(95px);
+    }
+    .left-top-side {
+        top: 25px;
+        left: -25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+    .straight-line {
+        width: 1px;
+        height: 0.5px;
+        background-color: transparent;
+        margin-left: 60px;
+    }
+    .home, .destination, .crew, .technology {
+        margin-left: 10px;
+        margin-right: 35px;
+        color: rgb(177, 174, 174);
+        cursor: pointer;
+        padding: 40px 0px 40px 0px;
+        border: 2px solid transparent;
+        transition: 0.8s;
+    }
+    .home {
+        border-bottom: 2px solid white;
+    }
+    .bottom-part {
+        position:absolute; 
+        top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: 0%;
+    }
+    .second-sentence {
+        font-size: 170px;
+    }
+    .third-sentence {
+        text-align: center;
+        width: 420px;
+        line-height: 1.5;  
+    }
+    .first-sentence, .second-sentence, .third-sentence {
+        margin-left: 0px;
+        margin-bottom: 35px;
+    }
+    .explore {
+        position: absolute;
+        top: 700px;
+        width: 100%;
+        height: 375px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 649px) {
+    .nav {
+        
+        position: absolute;
+        z-index: 12;
+        right: 0;
+        width: 61%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .blur-overlay {
+        display: none;
+    }
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 1100px;
+        overflow: hidden;
+    }
+    .home-background {
+        content: url('home/background-home-mobile.jpg');
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .left-top-side {
+        position: absolute;
+        top: 25px;
+        left: -25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+    .straight-line {
+        width: 1px;
+        height: 0.5px;
+        background-color: transparent;
+        margin-left: 60px;
+    }
+    .home, .destination, .crew, .technology {
+        margin-left: 10px;
+        margin-right: 35px;
+        color: rgb(177, 174, 174);
+        cursor: pointer;
+        padding: 40px 0px 40px 0px;
+        border: 2px solid transparent;
+        transition: 0.8s;
+    }
+    .home {
+        border-bottom: 2px solid white;
+    }
+    .bottom-part {
+        position:absolute; 
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: 0%;
+    }
+    .second-sentence {
+        font-size: 85px;
+    }
+    .third-sentence {
+        text-align: center;
+        width: 420px;
+        line-height: 1.5;  
+    }
+    .first-sentence, .second-sentence, .third-sentence {
+        margin-left: 0px;
+        margin-bottom: 35px;
+    }
+    .explore {
+        position: absolute;
+        top: 700px;
+        width: 100%;
+        height: 375px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .hamburger {
+        position: absolute;
+        z-index: 12;
+        right: 40px;
+        width: 40px;
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        top: 35px;
+    } 
+    .line { 
+        border-radius: 10px;
+        width: 40px;
+        height: 4px;
+        background-color: #fff; /* Color of the lines */
+    }
+    .hamburger-toggle {
+        display: none;
+    }
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 11;
+        right: 0;
+        width: 50%;
+        height: 181%;
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(95px);
+    }
+    .menu-x-toggle {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: end;
+        width: 89%;
+        height: 58px;
+        cursor: pointer;
+        top: 35px;
+    }
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        width: 100%;
+        height: 40%;
+        color: white;
+    }
+    .ho, .des, .cr, .tech {
+        margin-left: 10px;
+        margin-top: 50px;      
+    }
+    .hoa, .desa, .cra, .techa {
+        font-family: Roboto;
+        font-size: 16px;   
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: 0.8s;
+    }
+    .hoa:hover, .desa:hover, .cra:hover, .techa:hover {
+        opacity: 0.5;
+    }
+    .hoa {
+        border-bottom: 2px solid white;
+        }
+}
